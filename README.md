@@ -11,16 +11,16 @@
 ---
 
 ## 🔹 Overview
-This assignment demonstrates the setup of a **DNS Server** using Cisco Packet Tracer and explains how domain names are resolved into IP addresses within a local network.
+This assignment demonstrates the configuration of a **DNS Server** using Cisco Packet Tracer and explains how domain names are translated into IP addresses within a local network.
 
 ---
 
 ## 🔹 Network Design
 
 **Devices Used:**
-- 1 Server (DNS)
-- 2–3 PCs
-- 1 Switch
+- 1 DNS Server  
+- 2–3 PCs  
+- 1 Switch  
 
 **Topology:**  
 PCs → Switch → Server  
@@ -42,7 +42,7 @@ PCs → Switch → Server
 
 ## 🔹 DNS Configuration
 
-The following DNS records were created:
+The following DNS records were configured:
 
 - www.example.com → 192.168.1.2  
 - www.google.com → 192.168.1.2  
@@ -51,4 +51,61 @@ The following DNS records were created:
 
 ## 🔹 Testing
 
-**Ping Commands:**
+### Ping:
+```bash
+ping www.example.com
+ping www.google.com
+```
+
+### NSLOOKUP:
+```bash
+nslookup www.example.com
+nslookup www.google.com
+```
+
+### Traceroute:
+```bash
+tracert www.example.com
+```
+
+---
+
+## 🔹 Analysis
+
+### Query Time
+- Approximately 1–2 ms due to same network environment  
+
+### Response Accuracy
+- All domain names were resolved successfully without errors  
+
+### Name Resolution Process
+1. User enters a domain name in the system  
+2. The request is sent to the configured DNS server  
+3. The DNS server searches its records  
+4. The corresponding IP address is returned  
+5. The system establishes communication using that IP  
+
+---
+
+## 🔹 Key Observations
+
+- DNS converts human-readable domain names into machine-readable IP addresses  
+- Proper IP and DNS configuration is essential for successful communication  
+- DNS resolution works independently of general network connectivity  
+- Cisco Packet Tracer simulates a local environment and does not access the real internet  
+
+---
+
+## 🔹 Conclusion
+
+The DNS server was successfully configured and tested within the simulated environment.  
+All domain names were resolved accurately with minimal delay, demonstrating efficient DNS functionality in a local network.
+
+---
+
+## 🔹 Tools Used
+
+- Cisco Packet Tracer  
+- Command Prompt  
+
+---
